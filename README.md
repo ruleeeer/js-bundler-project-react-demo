@@ -1,3 +1,9 @@
+
+
+
+https://github.com/ruleeeer/js-bundler-project-react-demo/assets/70385062/5e338599-0f47-43a9-b3c1-b0ade035c8f4
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
