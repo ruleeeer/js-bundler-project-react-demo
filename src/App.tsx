@@ -1,49 +1,152 @@
-import Row_0 from "./components/Row_0.tsx";
-import Row_1 from "./components/Row_1.tsx";
-import Row_2 from "./components/Row_2.tsx";
-import Row_3 from "./components/Row_3.tsx";
-import Row_4 from "./components/Row_4.tsx";
-import Row_5 from "./components/Row_5.tsx";
-import Row_6 from "./components/Row_6.tsx";
-import Row_7 from "./components/Row_7.tsx";
-import Row_8 from "./components/Row_8.tsx";
-import Row_9 from "./components/Row_9.tsx";
-import Row_10 from "./components/Row_10.tsx";
-import Row_11 from "./components/Row_11.tsx";
-import Row_12 from "./components/Row_12.tsx";
-import Row_13 from "./components/Row_13.tsx";
-import Row_14 from "./components/Row_14.tsx";
-import Row_15 from "./components/Row_15.tsx";
-import Row_16 from "./components/Row_16.tsx";
-import Row_17 from "./components/Row_17.tsx";
-import Row_18 from "./components/Row_18.tsx";
-import Row_19 from "./components/Row_19.tsx";
+import React from 'react';
+import Carousel_0_0 from "./components/Carousel_0_0.tsx";
+import Carousel_1_0 from "./components/Carousel_1_0.tsx";
+import Carousel_1_1 from "./components/Carousel_1_1.tsx";
+import Carousel_2_0 from "./components/Carousel_2_0.tsx";
+import Carousel_2_1 from "./components/Carousel_2_1.tsx";
+import Carousel_2_2 from "./components/Carousel_2_2.tsx";
+import Carousel_3_0 from "./components/Carousel_3_0.tsx";
+import Carousel_3_1 from "./components/Carousel_3_1.tsx";
+import Carousel_3_2 from "./components/Carousel_3_2.tsx";
+import Carousel_3_3 from "./components/Carousel_3_3.tsx";
+import Carousel_4_0 from "./components/Carousel_4_0.tsx";
+import Carousel_4_1 from "./components/Carousel_4_1.tsx";
+import Carousel_4_2 from "./components/Carousel_4_2.tsx";
+import Carousel_4_3 from "./components/Carousel_4_3.tsx";
+import Carousel_4_4 from "./components/Carousel_4_4.tsx";
+import Carousel_5_0 from "./components/Carousel_5_0.tsx";
+import Carousel_5_1 from "./components/Carousel_5_1.tsx";
+import Carousel_5_2 from "./components/Carousel_5_2.tsx";
+import Carousel_5_3 from "./components/Carousel_5_3.tsx";
+import Carousel_5_4 from "./components/Carousel_5_4.tsx";
+import Carousel_5_5 from "./components/Carousel_5_5.tsx";
+import Carousel_6_0 from "./components/Carousel_6_0.tsx";
+import Carousel_6_1 from "./components/Carousel_6_1.tsx";
+import Carousel_6_2 from "./components/Carousel_6_2.tsx";
+import Carousel_6_3 from "./components/Carousel_6_3.tsx";
+import Carousel_6_4 from "./components/Carousel_6_4.tsx";
+import Carousel_6_5 from "./components/Carousel_6_5.tsx";
+import Carousel_6_6 from "./components/Carousel_6_6.tsx";
+import Carousel_7_0 from "./components/Carousel_7_0.tsx";
+import Carousel_7_1 from "./components/Carousel_7_1.tsx";
+import Carousel_7_2 from "./components/Carousel_7_2.tsx";
+import Carousel_7_3 from "./components/Carousel_7_3.tsx";
+import Carousel_7_4 from "./components/Carousel_7_4.tsx";
+import Carousel_7_5 from "./components/Carousel_7_5.tsx";
+import Carousel_7_6 from "./components/Carousel_7_6.tsx";
+import Carousel_7_7 from "./components/Carousel_7_7.tsx";
+import Carousel_8_0 from "./components/Carousel_8_0.tsx";
+import Carousel_8_1 from "./components/Carousel_8_1.tsx";
+import Carousel_8_2 from "./components/Carousel_8_2.tsx";
+import Carousel_8_3 from "./components/Carousel_8_3.tsx";
+import Carousel_8_4 from "./components/Carousel_8_4.tsx";
+import Carousel_8_5 from "./components/Carousel_8_5.tsx";
+import Carousel_8_6 from "./components/Carousel_8_6.tsx";
+import Carousel_8_7 from "./components/Carousel_8_7.tsx";
+import Carousel_8_8 from "./components/Carousel_8_8.tsx";
+import Carousel_9_0 from "./components/Carousel_9_0.tsx";
+import Carousel_9_1 from "./components/Carousel_9_1.tsx";
+import Carousel_9_2 from "./components/Carousel_9_2.tsx";
+import Carousel_9_3 from "./components/Carousel_9_3.tsx";
+import Carousel_9_4 from "./components/Carousel_9_4.tsx";
+import Carousel_9_5 from "./components/Carousel_9_5.tsx";
+import Carousel_9_6 from "./components/Carousel_9_6.tsx";
+import Carousel_9_7 from "./components/Carousel_9_7.tsx";
+import Carousel_9_8 from "./components/Carousel_9_8.tsx";
+import Carousel_9_9 from "./components/Carousel_9_9.tsx";
 
-const Root = () => {
+
+const App: React.FC = () => {
     return (
-        <div style={{ position: 'absolute', left: 0, top: 0, margin: 0, padding: 0 }} className="root">
-            <Row_0 />
-            <Row_1 />
-            <Row_2 />
-            <Row_3 />
-            <Row_4 />
-            <Row_5 />
-            <Row_6 />
-            <Row_7 />
-            <Row_8 />
-            <Row_9 />
-            <Row_10 />
-            <Row_11 />
-            <Row_12 />
-            <Row_13 />
-            <Row_14 />
-            <Row_15 />
-            <Row_16 />
-            <Row_17 />
-            <Row_18 />
-            <Row_19 />
+        <div style={{width: '1500px'}}>
+            <div style={{display: 'flex', alignItems: 'center', justifyItems: 'center'}}>
+                <Carousel_0_0/>
+
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', justifyItems: 'center'}}>
+                <Carousel_1_0/>
+                <Carousel_1_1/>
+
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', justifyItems: 'center'}}>
+                <Carousel_2_0/>
+                <Carousel_2_1/>
+                <Carousel_2_2/>
+
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', justifyItems: 'center'}}>
+                <Carousel_3_0/>
+                <Carousel_3_1/>
+                <Carousel_3_2/>
+                <Carousel_3_3/>
+
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', justifyItems: 'center'}}>
+                <Carousel_4_0/>
+                <Carousel_4_1/>
+                <Carousel_4_2/>
+                <Carousel_4_3/>
+                <Carousel_4_4/>
+
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', justifyItems: 'center'}}>
+                <Carousel_5_0/>
+                <Carousel_5_1/>
+                <Carousel_5_2/>
+                <Carousel_5_3/>
+                <Carousel_5_4/>
+                <Carousel_5_5/>
+
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', justifyItems: 'center'}}>
+                <Carousel_6_0/>
+                <Carousel_6_1/>
+                <Carousel_6_2/>
+                <Carousel_6_3/>
+                <Carousel_6_4/>
+                <Carousel_6_5/>
+                <Carousel_6_6/>
+
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', justifyItems: 'center'}}>
+                <Carousel_7_0/>
+                <Carousel_7_1/>
+                <Carousel_7_2/>
+                <Carousel_7_3/>
+                <Carousel_7_4/>
+                <Carousel_7_5/>
+                <Carousel_7_6/>
+                <Carousel_7_7/>
+
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', justifyItems: 'center'}}>
+                <Carousel_8_0/>
+                <Carousel_8_1/>
+                <Carousel_8_2/>
+                <Carousel_8_3/>
+                <Carousel_8_4/>
+                <Carousel_8_5/>
+                <Carousel_8_6/>
+                <Carousel_8_7/>
+                <Carousel_8_8/>
+
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', justifyItems: 'center'}}>
+                <Carousel_9_0/>
+                <Carousel_9_1/>
+                <Carousel_9_2/>
+                <Carousel_9_3/>
+                <Carousel_9_4/>
+                <Carousel_9_5/>
+                <Carousel_9_6/>
+                <Carousel_9_7/>
+                <Carousel_9_8/>
+                <Carousel_9_9/>
+
+            </div>
+
         </div>
     );
 };
 
-export default Root;
+export default App;
