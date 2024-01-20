@@ -1,5 +1,5 @@
 // Carousel.tsx
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, CSSProperties} from 'react';
 import {all} from '../featureTools';
 
 interface SlideProps {
@@ -17,10 +17,14 @@ interface SlideData {
 }
 
 const slides: SlideData[] = [
-   {content: '#D5AD6D', backgroundColor: '#D5AD6D'},{content: '#3A1CD0', backgroundColor: '#3A1CD0'},{content: '#C2975F', backgroundColor: '#C2975F'},
+   {content: '#E3BE58', backgroundColor: '#E3BE58'},{content: '#47DB45', backgroundColor: '#47DB45'},{content: '#5A4105', backgroundColor: '#5A4105'},
 ];
+interface Styles {
+    carousel: CSSProperties,
+    slide: CSSProperties,
+}
 
-const styles = {
+const styles:Styles = {
     carousel: {
         width: '100%',
         justifyContent: 'center',
