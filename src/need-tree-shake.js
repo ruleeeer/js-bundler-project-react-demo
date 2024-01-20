@@ -1,4 +1,4 @@
-function isPrime(num) {
+export  function isPrime(num) {
     if (num == 2) {
         return true;
     }
