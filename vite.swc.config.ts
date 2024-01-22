@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
     plugins: [react()],
     build: {
-        outDir: 'dist-vite'
+        outDir: 'dist-vite-swc'
     },
     resolve: {
         extensions: ['.tsx', '.jsx', '.ts', '.js', '.json']
@@ -13,4 +13,5 @@ export default defineConfig({
     css: {
         devSourcemap: true,
     },
+    cacheDir: 'node_modules/.vite-swc'
 })
