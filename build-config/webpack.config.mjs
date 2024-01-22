@@ -1,4 +1,4 @@
-import * as path from "path";
+import * as path from "path.js";
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import {fileURLToPath} from "node:url";
 
@@ -6,27 +6,20 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 const config = {
     entry: './src/main.tsx',
     output: {
-        path: path.resolve(dirname, 'dist-webpack-swc'),
+        path: path.resolve(dirname, 'dist-webpack'),
     },
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
                 use: {
-                    loader: 'swc-loader', // Switched to swc-loader
+                    loader: 'babel-loader',
                     options: {
-                        jsc: {
-                            parser: {
-                                syntax: "typescript",
-                                dynamicImport: true,
-                                decoratorsTs: true,
-                            },
-                            transform: {
-                                react: {
-                                    runtime: "automatic",
-                                },
-                            },
-                        }
+                        presets: [
+                            '@babel/preset-env',
+                            ['@babel/preset-react', {runtime: "automatic"}],
+                            '@babel/preset-typescript'
+                        ],
                     }
                 },
                 exclude: /node_modules/
@@ -43,5 +36,4 @@ const config = {
         }),
     ],
 };
-
 export default config;
