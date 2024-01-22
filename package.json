@@ -6,8 +6,12 @@
   "scripts": {
     "start:vite": "vite",
     "start:vite-swc": "vite -c vite.swc.config.ts",
+    "start:webpack": "webpack serve --config ./webpack.config.mjs --mode development",
+    "start:webpack-swc": "webpack serve --config ./webpack.swc.config.mjs --mode development",
     "build:vite": "vite build",
     "build:vite-swc": "vite build -c vite.swc.config.ts",
+    "build:webpack": "webpack build --config ./webpack.config.mjs --mode production",
+    "build:webpack-swc": "webpack build --config ./webpack.swc.config.mjs --mode production",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -16,6 +20,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
     "@types/node": "^18.19.3",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
@@ -23,10 +31,19 @@
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react": "^4.2.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.9.1",
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "html-webpack-plugin": "^5.6.0",
+    "react-refresh": "^0.14.0",
+    "style-loader": "^3.3.4",
+    "swc-loader": "^0.2.3",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
