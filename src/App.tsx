@@ -1,5 +1,6 @@
 import React from 'react';
-// @ts-ignore
+// @ts-expect-error test for treeshake
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {isPrime} from "./need-tree-shake";
 import Carousel_0_0 from "./components/Carousel_0_0.tsx";
 import Carousel_1_0 from "./components/Carousel_1_0.tsx";
