@@ -1,12 +1,12 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin'
 import {fileURLToPath, resolve} from "node:url";
-import {dirname} from "node:path";
+import {dirname} from 'node:path'
+import rspack from "@rspack/core";
 
 const dir = dirname(fileURLToPath(import.meta.url));
 const config = {
     entry: './src/main.tsx',
     output: {
-        path: resolve(dir, 'dist-webpack'),
+        path: resolve(dir, 'dist-rspack'),
     },
     module: {
         rules: [
@@ -31,9 +31,16 @@ const config = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './index.webpack.html'
-        }),
+        new rspack.HtmlRspackPlugin({template: './index.webpack.html'}),
     ],
+    watchOptions: {
+        poll: 0,
+        aggregateTimeout: 0
+    },
+    stats: {
+        timings: true,
+        all: false
+    }
 };
+
 export default config;
