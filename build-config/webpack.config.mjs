@@ -32,7 +32,7 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.webpack.html'
+            template: './build-config/index.webpack.html'
         }),
     ],
 };
