@@ -15,6 +15,7 @@
     "start:esbuild": "node ./build-tool/esbuild.mjs --watch",
     "start:parcel": "parcel index.html --dist-dir dist-parcel",
     "start:snowpack": "snowpack dev --config build-config/snowpack.config.mjs",
+    "start:rsbuild": "rsbuild dev --config build-config/rsbuild.config.js",
     "build:vite": "vite build -c build-config/vite.config.ts",
     "build:vite-swc": "vite build -c build-config/vite.swc.config.ts",
     "build:webpack": "webpack build --config build-config/webpack.config.mjs --mode production",
@@ -26,6 +27,7 @@
     "build:esbuild": "esbuild src/main.tsx --bundle --minify --target=chrome87,firefox78,safari14,edge88 --outdir=dist-esbuild",
     "build:parcel": "cross-env NODE_ENV=production parcel build index.html --dist-dir dist-parcel --no-source-maps --no-cache",
     "build:snowpack": "snowpack build --config build-config/snowpack.config.mjs",
+    "build:rsbuild": "rsbuild build --config build-config/rsbuild.config.js",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -73,6 +75,8 @@
     "vue": "^3.4.15",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "@rsbuild/core": "^0.3.5",
+    "@rsbuild/plugin-react": "^0.3.5"
   }
 }
