@@ -25,3 +25,4 @@ dist-*
 
 # temp file
 esbuild-serve
+.parcel-cache
