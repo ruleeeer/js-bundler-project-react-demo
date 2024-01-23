@@ -9,7 +9,6 @@ lerna-debug.log*
 
 node_modules
 dist
-dist-ssr
 dist-*
 *.local
 
@@ -23,3 +22,6 @@ dist-*
 *.njsproj
 *.sln
 *.sw?
+
+# temp file
+esbuild-serve
