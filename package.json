@@ -16,6 +16,7 @@
     "start:parcel": "parcel index.html --dist-dir dist-parcel",
     "start:snowpack": "snowpack dev --config build-config/snowpack.config.mjs",
     "start:rsbuild": "rsbuild dev --config build-config/rsbuild.config.js",
+    "start:rollup": "cross-env NODE_ENV=development rollup --config build-config/rollup.config.mjs",
     "build:vite": "vite build -c build-config/vite.config.ts",
     "build:vite-swc": "vite build -c build-config/vite.swc.config.ts",
     "build:webpack": "webpack build --config build-config/webpack.config.mjs --mode production",
@@ -28,6 +29,7 @@
     "build:parcel": "cross-env NODE_ENV=production parcel build index.html --dist-dir dist-parcel --no-source-maps --no-cache",
     "build:snowpack": "snowpack build --config build-config/snowpack.config.mjs",
     "build:rsbuild": "rsbuild build --config build-config/rsbuild.config.js",
+    "build:rollup": "cross-env NODE_ENV=production rollup --config build-config/rollup.config.mjs",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -43,6 +45,12 @@
     "@farmfe/cli": "^0.5.11",
     "@farmfe/core": "^0.14.12",
     "@farmfe/plugin-react": "^0.4.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rsbuild/core": "^0.3.5",
+    "@rsbuild/plugin-react": "^0.3.5",
     "@rspack/cli": "^0.5.1",
     "@rspack/core": "^0.5.1",
     "@rspack/plugin-react-refresh": "^0.5.1",
@@ -67,6 +75,10 @@
     "process": "^0.11.10",
     "react-refresh": "^0.14.0",
     "repack": "^0.0.1",
+    "rollup": "^4.9.6",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-server": "^0.7.0",
+    "rollup-plugin-typescript2": "^0.36.0",
     "snowpack": "^3.8.8",
     "style-loader": "^3.3.4",
     "swc-loader": "^0.2.3",
@@ -75,8 +87,6 @@
     "vue": "^3.4.15",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1",
-    "@rsbuild/core": "^0.3.5",
-    "@rsbuild/plugin-react": "^0.3.5"
+    "webpack-dev-server": "^4.15.1"
   }
 }
