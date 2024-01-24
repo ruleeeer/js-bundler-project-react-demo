@@ -1,7 +1,10 @@
 import {fileURLToPath, resolve} from "node:url";
 import {dirname} from 'node:path'
 import rspack from "@rspack/core";
+import reactRefresh from '@rspack/plugin-react-refresh'
 
+const env = process.env.NODE_ENV;
+const isProdMode = env === 'production';
 const dir = dirname(fileURLToPath(import.meta.url));
 const config = {
     entry: './src/main.tsx',
@@ -31,12 +34,14 @@ const config = {
         ]
     },
     plugins: [
-        new rspack.HtmlRspackPlugin({template: './index.webpack.html'}),
+        new rspack.HtmlRspackPlugin({template: resolve(dir, 'build-config/index.webpack.html')}),
+        !isProdMode && new reactRefresh()
     ],
     watchOptions: {
         poll: 0,
         aggregateTimeout: 0
     },
+    devtool: isProdMode ? false : 'nosources-cheap-source-map',
     stats: {
         timings: true,
         all: false

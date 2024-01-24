@@ -5,7 +5,10 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
     plugins: [react()],
     build: {
-        outDir: 'dist-vite-swc'
+        outDir: 'dist-vite-swc',
+        rollupOptions: {
+            input: 'index.html'
+        }
     },
     resolve: {
         extensions: ['.tsx', '.jsx', '.ts', '.js', '.json']

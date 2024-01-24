@@ -7,10 +7,10 @@ import postcss from 'rollup-plugin-postcss'
 import server from 'rollup-plugin-server'
 import {fileURLToPath, resolve} from "node:url";
 import {dirname} from "node:path";
-import {copyFileSync} from "node:fs";
+import {copyFileSync, existsSync, mkdirSync} from "node:fs";
 
 
-let env = process.env.NODE_ENV;
+const env = process.env.NODE_ENV;
 const isProdMode = env === 'production';
 const serverConfig = [];
 if (!isProdMode) {
@@ -22,14 +22,19 @@ if (!isProdMode) {
 //     copy index.html to dist
     const path = fileURLToPath(import.meta.url);
     const srcPath = resolve(path, "index.rollup.html");
-    const distPath = resolve(dirname(path), 'dist-rollup/index.html');
-    copyFileSync(srcPath, distPath)
+    const distDir =  resolve(dirname(path) , 'dist-rollup/');
+    if(!existsSync(distDir)){
+        mkdirSync(distDir);
+    }
+    const distPath = resolve(distDir, './index.html');
+    copyFileSync(srcPath, distPath);
 }
 export default {
     input: 'src/main.tsx',
     output: {
         file: 'dist-rollup/main.js',
-        format: 'esm'
+        format: 'esm',
+        sourcemap: !isProdMode
     },
     plugins: [
         nodeResolve({

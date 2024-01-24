@@ -1,6 +1,7 @@
-import type { UserConfig } from '@farmfe/core'
+import type {UserConfig} from '@farmfe/core'
 
-const isBuild = process.env.IS_BUILD === '1'
+const env = process.env.NODE_ENV;
+const isProdMode = env === 'production';
 
 const config: UserConfig = {
     compilation: {
@@ -15,7 +16,7 @@ const config: UserConfig = {
         output: {
             path: './dist-farm',
         },
-        sourcemap: !isBuild,
+        sourcemap: !isProdMode,
         presetEnv: {
             options: {
                 targets: 'Chrome >= 87, Firefox >= 78, Safari >= 14, Edge >= 88'

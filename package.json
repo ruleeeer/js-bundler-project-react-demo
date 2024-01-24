@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start:vite": "vite",
+    "start:vite": "vite -c build-config/vite.config.ts",
     "start:vite-swc": "vite -c build-config/vite.swc.config.ts",
     "start:webpack": "webpack serve --config build-config/webpack.config.mjs --mode development",
     "start:webpack-swc": "webpack serve --config build-config/webpack.swc.config.mjs --mode development",
@@ -45,6 +45,7 @@
     "@farmfe/cli": "^0.5.11",
     "@farmfe/core": "^0.14.12",
     "@farmfe/plugin-react": "^0.4.3",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -88,5 +89,8 @@
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  }
+  },
+  "browserslist": [
+    "Chrome >= 87, Firefox >= 78, Safari >= 14, Edge >= 88"
+  ]
 }

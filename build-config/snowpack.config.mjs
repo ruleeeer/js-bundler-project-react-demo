@@ -1,8 +1,9 @@
+const isProdMode = process.env.NODE_ENV === 'production';
 export default {
     mode: 'production',
     mount: {
-        'snowpack-public':'/',
-        '../src':'/src'
+        'snowpack-public': '/',
+        '../src': '/src'
     },
     plugins: [
         '@snowpack/plugin-react-refresh'
@@ -13,6 +14,6 @@ export default {
     },
     buildOptions: {
         out: '../dist-snowpack',
-        sourcemap: false
+        sourcemap: !isProdMode
     },
 };

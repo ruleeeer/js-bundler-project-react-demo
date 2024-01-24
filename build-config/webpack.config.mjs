@@ -1,7 +1,10 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import {fileURLToPath, resolve} from "node:url";
 import {dirname} from "node:path";
+import reactRefresh from "@pmmmwh/react-refresh-webpack-plugin";
 
+const env = process.env.NODE_ENV;
+const isProdMode = env === 'production';
 const dir = dirname(fileURLToPath(import.meta.url));
 const config = {
     entry: './src/main.tsx',
@@ -34,6 +37,7 @@ const config = {
         new HtmlWebpackPlugin({
             template: './build-config/index.webpack.html'
         }),
+        !isProdMode && new reactRefresh()
     ],
 };
 export default config;
